@@ -20,9 +20,9 @@
 #define HWNotificationCenter [NSNotificationCenter defaultCenter]
 
 #ifdef DEBUG // 处于开发阶段
-#define HWLog(...) NSLog(__VA_ARGS__)
+#define YSLog(...) YSLog(__VA_ARGS__)
 #else // 处于发布阶段
-#define HWLog(...)
+#define YSLog(...)
 #endif
 
 // RGB颜色

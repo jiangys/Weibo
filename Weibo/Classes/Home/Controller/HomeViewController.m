@@ -8,8 +8,10 @@
 
 #import "HomeViewController.h"
 #import "Test1ViewController.h"
+#import "DropdownMenu.h"
+#import "TitleMenuViewController.h"
 
-@interface HomeViewController ()
+@interface HomeViewController ()<DropdownMenuDelegate>
 
 @end
 
@@ -21,7 +23,45 @@
     self.navigationItem.leftBarButtonItem=[UIBarButtonItem itemWithImage:@"navigationbar_friendsearch" highImage:@"navigationbar_friendsearch_highlighted" target:self action:@selector(friendSearch)];
     
     self.navigationItem.rightBarButtonItem=[UIBarButtonItem itemWithImage:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted" target:self action:@selector(pop)];
+    
+    /* 中间的标题按钮 */
+    UIButton *titleButton = [[UIButton alloc] init];
+    titleButton.width = 150;
+    titleButton.height = 30;
+    
+    // 设置图片和文字
+    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
+    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
+    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
+    titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
+    
+    // 监听标题点击
+    [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.titleView = titleButton;
+}
 
+/**
+ *  标题点击
+ */
+- (void)titleClick:(UIButton *)titleButton
+{
+    // 1.创建下拉菜单
+    DropdownMenu *menu = [DropdownMenu menu];
+    menu.delegate = self;
+    
+    // 2.设置内容
+    TitleMenuViewController *vc = [[TitleMenuViewController alloc] init];
+    vc.view.height = 150;
+    vc.view.width = 150;
+    
+    menu.contentController = vc;
+    
+    // 3.显示
+    [menu showFrom:titleButton];
 }
                                            
 -(void)friendSearch
@@ -53,6 +93,25 @@
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
+}
+
+#pragma mark - HWDropdownMenuDelegate
+/**
+ *  下拉菜单被销毁了
+ */
+- (void)dropdownMenuDidDismiss:(DropdownMenu *)menu
+{
+    UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
+    titleButton.selected = NO;// 让箭头向下
+}
+
+/**
+ *  下拉菜单显示了
+ */
+- (void)dropdownMenuDidShow:(DropdownMenu *)menu
+{
+    UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
+    titleButton.selected = YES;// 让箭头向上
 }
 
 /*
