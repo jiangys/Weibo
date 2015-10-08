@@ -10,6 +10,7 @@
 #import "Test1ViewController.h"
 #import "DropdownMenu.h"
 #import "TitleMenuViewController.h"
+#import "TitleButton.h"
 
 @interface HomeViewController ()<DropdownMenuDelegate>
 
@@ -25,18 +26,8 @@
     self.navigationItem.rightBarButtonItem=[UIBarButtonItem itemWithImage:@"navigationbar_pop" highImage:@"navigationbar_pop_highlighted" target:self action:@selector(pop)];
     
     /* 中间的标题按钮 */
-    UIButton *titleButton = [[UIButton alloc] init];
-    titleButton.width = 150;
-    titleButton.height = 30;
-    
-    // 设置图片和文字
-    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
-    [titleButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    titleButton.titleLabel.font = [UIFont boldSystemFontOfSize:17];
-    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_down"] forState:UIControlStateNormal];
-    [titleButton setImage:[UIImage imageNamed:@"navigationbar_arrow_up"] forState:UIControlStateSelected];
-    titleButton.imageEdgeInsets = UIEdgeInsetsMake(0, 70, 0, 0);
-    titleButton.titleEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 40);
+    TitleButton *titleButton = [[TitleButton alloc] init];
+    [titleButton setTitle:@"首页哈哈哈" forState:UIControlStateNormal];
     
     // 监听标题点击
     [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];

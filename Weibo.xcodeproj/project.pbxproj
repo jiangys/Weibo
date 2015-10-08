@@ -12,6 +12,7 @@
 		5A24912E1BC2D73D00F726AB /* UIImage+Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A24912D1BC2D73D00F726AB /* UIImage+Effect.m */; settings = {ASSET_TAGS = (); }; };
 		5A2491341BC2DB9F00F726AB /* DropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2491331BC2DB9F00F726AB /* DropdownMenu.m */; settings = {ASSET_TAGS = (); }; };
 		5A24913A1BC2DF8400F726AB /* TitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2491391BC2DF8400F726AB /* TitleMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5A6082591BC6BEF000B10279 /* TitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6082581BC6BEF000B10279 /* TitleButton.m */; settings = {ASSET_TAGS = (); }; };
 		5A66738D1BC2166C00666542 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66736C1BC2166C00666542 /* DiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A66738E1BC2166C00666542 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673721BC2166C00666542 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5A66738F1BC2166C00666542 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673781BC2166C00666542 /* TabBarViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -59,6 +60,8 @@
 		5A2491331BC2DB9F00F726AB /* DropdownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropdownMenu.m; sourceTree = "<group>"; };
 		5A2491381BC2DF8400F726AB /* TitleMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleMenuViewController.h; sourceTree = "<group>"; };
 		5A2491391BC2DF8400F726AB /* TitleMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleMenuViewController.m; sourceTree = "<group>"; };
+		5A6082571BC6BEF000B10279 /* TitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleButton.h; sourceTree = "<group>"; };
+		5A6082581BC6BEF000B10279 /* TitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleButton.m; sourceTree = "<group>"; };
 		5A66736B1BC2166C00666542 /* DiscoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
 		5A66736C1BC2166C00666542 /* DiscoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
 		5A6673711BC2166C00666542 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -211,6 +214,8 @@
 		5A6673741BC2166C00666542 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5A6082571BC6BEF000B10279 /* TitleButton.h */,
+				5A6082581BC6BEF000B10279 /* TitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -625,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6082591BC6BEF000B10279 /* TitleButton.m in Sources */,
 				5A66738D1BC2166C00666542 /* DiscoverViewController.m in Sources */,
 				5A6673901BC2166C00666542 /* MessageCenterViewController.m in Sources */,
 				5A66739A1BC2184B00666542 /* AppDelegate.m in Sources */,
