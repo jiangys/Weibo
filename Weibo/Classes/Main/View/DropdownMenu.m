@@ -23,7 +23,8 @@
     if (!_containerView) {
         // 添加一个灰色图片控件
         UIImageView *containerView = [[UIImageView alloc] init];
-        containerView.image =[UIImage imageToResizable:@"popover_background"]; //[UIImage imageNamed:@"popover_background"];
+        // 拉伸图片
+        containerView.image =[UIImage imageToResizable:@"popover_background"];
         containerView.userInteractionEnabled = YES; // 开启交互
         [self addSubview:containerView];
         self.containerView = containerView;
@@ -40,7 +41,6 @@
     }
     return self;
 }
-
 
 + (instancetype)menu
 {

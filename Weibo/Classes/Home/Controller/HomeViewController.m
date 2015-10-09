@@ -27,7 +27,7 @@
     
     /* 中间的标题按钮 */
     TitleButton *titleButton = [[TitleButton alloc] init];
-    [titleButton setTitle:@"首页哈哈哈" forState:UIControlStateNormal];
+    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
     
     // 监听标题点击
     [titleButton addTarget:self action:@selector(titleClick:) forControlEvents:UIControlEventTouchUpInside];
