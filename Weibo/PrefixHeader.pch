@@ -13,22 +13,27 @@
 #ifdef __OBJC__
 #import "UIView+Frame.h"
 #import "UIBarButtonItem+Extension.h"
+#import "UIWindow+Extension.h"
 
+// 判断是否是iOS7
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 
+// 是否为4inch以上
+#define FourInch ([UIScreen mainScreen].bounds.size.height >= 568.0)
+
 // 通知中心
-#define HWNotificationCenter [NSNotificationCenter defaultCenter]
+#define YSNotificationCenter [NSNotificationCenter defaultCenter]
 
 #ifdef DEBUG // 处于开发阶段
-#define YSLog(...) YSLog(__VA_ARGS__)
+#define YSLog(...) NSLog(__VA_ARGS__)
 #else // 处于发布阶段
 #define YSLog(...)
 #endif
 
 // RGB颜色
-#define HWColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define YSColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 // 随机色
-#define HWRandomColor HWColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+#define YSRandomColor HWColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
 #endif /* PrefixHeader_pch */
