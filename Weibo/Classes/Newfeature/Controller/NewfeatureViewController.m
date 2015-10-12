@@ -9,12 +9,10 @@
 #import "NewfeatureViewController.h"
 #import "TabBarViewController.h"
 
+// 新特性图片总数
 #define NewfeatureCount 4
 
 @interface NewfeatureViewController ()<UIScrollViewDelegate>
-
-/** 滑动图片 */
-// @property (nonatomic, strong) UIScrollView *scrollView;
 
 /** 滑动图片 分页 */
 @property (nonatomic, strong) UIPageControl *pageControl;

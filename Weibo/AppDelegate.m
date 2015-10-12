@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "TabBarViewController.h"
-#import "NewfeatureViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,13 +19,8 @@
 
     self.window=[[UIWindow alloc]init];
     self.window.frame=[UIScreen mainScreen].bounds;
-    
-    //self.window.rootViewController=[[TabBarViewController alloc]init];
-    //self.window.rootViewController=[[NewfeatureViewController alloc]init];
     [self.window switchRootViewController];
-    
     [self.window makeKeyAndVisible];
-    
     
     return YES;
 }
