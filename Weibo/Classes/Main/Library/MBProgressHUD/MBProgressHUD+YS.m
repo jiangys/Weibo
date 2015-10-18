@@ -1,14 +1,14 @@
 //
-//  MBProgressHUD+NJ.m
-//  NJWisdomCard
+//  MBProgressHUD+YS.m
+//  Weibo
 //
-//  Created by apple on 15/8/25.
-//  Copyright (c) 2015年 Weconex. All rights reserved.
+//  Created by jiangys on 15/10/17.
+//  Copyright © 2015年 Jiangys. All rights reserved.
 //
 
-#import "MBProgressHUD+NJ.h"
+#import "MBProgressHUD+YS.h"
 
-@implementation MBProgressHUD (NJ)
+@implementation MBProgressHUD (YS)
 
 /**
  *  显示信息
@@ -69,6 +69,11 @@
     return [self showMessage:message toView:nil dimBackground:NO];
 }
 
++ (MBProgressHUD *)showMessage:(NSString *)message toView:(UIView *)view
+{
+    return [self showMessage:message toView:view dimBackground:NO];
+}
+
 /**
  *  显示一些信息，有蒙版
  *
@@ -108,7 +113,6 @@
     hud.removeFromSuperViewOnHide = YES;
     [hud hide:YES afterDelay:1.2];
 }
-
 
 + (void)hideHUD
 {
