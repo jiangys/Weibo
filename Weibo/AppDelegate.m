@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "OAuthViewController.h"
+#import "Account.h"
+#import "AccountTool.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +22,15 @@
 
     self.window=[[UIWindow alloc]init];
     self.window.frame=[UIScreen mainScreen].bounds;
-    [self.window switchRootViewController];
+    
+    // 2.设置根控制器
+    Account *account = [AccountTool getAccount];
+    if (account) { // 之前已经登录成功过
+        [self.window switchRootViewController];
+    } else {
+        self.window.rootViewController = [[OAuthViewController alloc] init];
+    }
+    
     [self.window makeKeyAndVisible];
     
     return YES;

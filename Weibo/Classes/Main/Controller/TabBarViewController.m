@@ -86,7 +86,7 @@
 
     [self presentViewController:nav animated:YES completion:nil];
 
-    NSLog(@"tabBarDidClickPlusButton");
+    //NSLog(@"tabBarDidClickPlusButton");
 }
 
 /**
