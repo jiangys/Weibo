@@ -11,6 +11,7 @@
 #import "StatusFrame.h"
 #import "User.h"
 #import "UIImageView+WebCache.h"
+#import "StatusPhotosView.h"
 
 @interface StatusCell()
 
@@ -22,7 +23,7 @@
 /** 会员图标 */
 @property (nonatomic, weak) UIImageView *vipView;
 /** 配图 */
-@property (nonatomic, weak) UIImageView *photosView;
+@property (nonatomic, weak) StatusPhotosView *photosView;
 /** 昵称 */
 @property (nonatomic, weak) UILabel *nameLabel;
 /** 时间 */
@@ -63,7 +64,7 @@
         self.vipView = vipView;
         
         /** 配图 */
-        UIImageView *photosView = [[UIImageView alloc] init];
+        StatusPhotosView *photosView = [[StatusPhotosView alloc] init];
         [originalView addSubview:photosView];
         self.photosView = photosView;
         
@@ -124,25 +125,45 @@
     }
 
     /** 配图 */
-    self.photosView.frame = statusFrame.photosViewF;
-    self.photosView.backgroundColor = [UIColor redColor];
+    if (status.pic_urls.count) {
+        self.photosView.frame = statusFrame.photosViewF;
+        self.photosView.photos = status.pic_urls;
+        self.photosView.hidden = NO;
+    } else {
+        self.photosView.hidden = YES;
+    }
     
     /** 昵称 */
     self.nameLabel.text = user.name;
     self.nameLabel.frame = statusFrame.nameLabelF;
     
     /** 时间 */
-    self.timeLabel.text = status.created_at;
-    self.timeLabel.frame = statusFrame.timeLabelF;
-    
+    NSString *time = status.created_at;
+    CGFloat timeX = statusFrame.nameLabelF.origin.x;
+    CGFloat timeY = CGRectGetMaxY(statusFrame.nameLabelF) + StatusCellBorderW;
+    CGSize timeSize = [time sizeWithFont:StatusCellTimeFont];
+    self.timeLabel.frame = (CGRect){{timeX, timeY}, timeSize};
+    self.timeLabel.text = time;
+
     /** 来源 */
+    CGFloat sourceX = CGRectGetMaxX(self.timeLabel.frame) + StatusCellBorderW;
+    CGFloat sourceY = timeY;
+    CGSize sourceSize = [status.source sizeWithFont:StatusCellSourceFont];
+    self.sourceLabel.frame = (CGRect){{sourceX, sourceY}, sourceSize};
     self.sourceLabel.text = status.source;
-    self.sourceLabel.frame = statusFrame.sourceLabelF;
     
     /** 正文 */
     self.contentLabel.text = status.text;
     self.contentLabel.frame = statusFrame.contentLabelF;
-
+    
+    /** 配图 */
+    if (status.pic_urls.count) {
+        self.photosView.photos = status.pic_urls;
+        self.photosView.frame = statusFrame.photosViewF;
+        self.photosView.hidden = NO;
+    } else {
+        self.photosView.hidden = YES;
+    }
 }
 
 + (instancetype)cellWithTableView:(UITableView *)tableView

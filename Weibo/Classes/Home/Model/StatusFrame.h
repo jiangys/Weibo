@@ -12,7 +12,7 @@
 // cell的边框宽度
 #define StatusCellBorderW 10
 // 昵称字体
-#define StatusCellNameFont [UIFont systemFontOfSize:15]
+#define StatusCellNameFont [UIFont systemFontOfSize:13]
 // 时间字体
 #define StatusCellTimeFont [UIFont systemFontOfSize:12]
 // 来源字体

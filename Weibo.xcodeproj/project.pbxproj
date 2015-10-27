@@ -46,6 +46,10 @@
 		5ABDEBC91BD33E75001CA5F1 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDEBC81BD33E75001CA5F1 /* Const.m */; settings = {ASSET_TAGS = (); }; };
 		5AC99EE41BCA6A83000B04A9 /* NewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC99EE31BCA6A83000B04A9 /* NewfeatureViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5AC99EE71BCAB8D0000B04A9 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC99EE61BCAB8D0000B04A9 /* UIWindow+Extension.m */; settings = {ASSET_TAGS = (); }; };
+		5AE56CBB1BDD1D0300AE3CF9 /* NSDate+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CBA1BDD1D0300AE3CF9 /* NSDate+Time.m */; settings = {ASSET_TAGS = (); }; };
+		5AE56CBE1BDD2D4E00AE3CF9 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CBD1BDD2D4E00AE3CF9 /* Photo.m */; settings = {ASSET_TAGS = (); }; };
+		5AE56CC41BDD2DED00AE3CF9 /* StatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CC31BDD2DED00AE3CF9 /* StatusPhotoView.m */; settings = {ASSET_TAGS = (); }; };
+		5AE56CC71BDD302600AE3CF9 /* StatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CC61BDD302600AE3CF9 /* StatusPhotosView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +147,14 @@
 		5AC99EE31BCA6A83000B04A9 /* NewfeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewfeatureViewController.m; sourceTree = "<group>"; };
 		5AC99EE51BCAB8D0000B04A9 /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
 		5AC99EE61BCAB8D0000B04A9 /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
+		5AE56CB91BDD1D0300AE3CF9 /* NSDate+Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Time.h"; sourceTree = "<group>"; };
+		5AE56CBA1BDD1D0300AE3CF9 /* NSDate+Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Time.m"; sourceTree = "<group>"; };
+		5AE56CBC1BDD2D4E00AE3CF9 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		5AE56CBD1BDD2D4E00AE3CF9 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		5AE56CC21BDD2DED00AE3CF9 /* StatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusPhotoView.h; sourceTree = "<group>"; };
+		5AE56CC31BDD2DED00AE3CF9 /* StatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusPhotoView.m; sourceTree = "<group>"; };
+		5AE56CC51BDD302600AE3CF9 /* StatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusPhotosView.h; sourceTree = "<group>"; };
+		5AE56CC61BDD302600AE3CF9 /* StatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusPhotosView.m; sourceTree = "<group>"; };
 		63CC039B003E9CD315E8C43F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		90DF48097AB2A3B47ECF9178 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -257,6 +269,8 @@
 				5A9E52981BDB87E900600929 /* Status.m */,
 				5A9E529A1BDB87FF00600929 /* StatusFrame.h */,
 				5A9E529B1BDB87FF00600929 /* StatusFrame.m */,
+				5AE56CBC1BDD2D4E00AE3CF9 /* Photo.h */,
+				5AE56CBD1BDD2D4E00AE3CF9 /* Photo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -268,6 +282,10 @@
 				5A6082581BC6BEF000B10279 /* TitleButton.m */,
 				5A9E52A91BDB912000600929 /* StatusCell.h */,
 				5A9E52AA1BDB912000600929 /* StatusCell.m */,
+				5AE56CC21BDD2DED00AE3CF9 /* StatusPhotoView.h */,
+				5AE56CC31BDD2DED00AE3CF9 /* StatusPhotoView.m */,
+				5AE56CC51BDD302600AE3CF9 /* StatusPhotosView.h */,
+				5AE56CC61BDD302600AE3CF9 /* StatusPhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -418,6 +436,8 @@
 				5AC99EE61BCAB8D0000B04A9 /* UIWindow+Extension.m */,
 				5A9E52AC1BDBD3B200600929 /* NSString+Size.h */,
 				5A9E52AD1BDBD3B200600929 /* NSString+Size.m */,
+				5AE56CB91BDD1D0300AE3CF9 /* NSDate+Time.h */,
+				5AE56CBA1BDD1D0300AE3CF9 /* NSDate+Time.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -745,6 +765,7 @@
 				5ABDEBC91BD33E75001CA5F1 /* Const.m in Sources */,
 				5A83568B1BD165C40009E47D /* AccountTool.m in Sources */,
 				5A66738F1BC2166C00666542 /* TabBarViewController.m in Sources */,
+				5AE56CC71BDD302600AE3CF9 /* StatusPhotosView.m in Sources */,
 				5A66739E1BC21BE600666542 /* NavigationViewController.m in Sources */,
 				5A66738E1BC2166C00666542 /* HomeViewController.m in Sources */,
 				5A6673A21BC222B400666542 /* UIBarButtonItem+Extension.m in Sources */,
@@ -754,12 +775,15 @@
 				5A66739B1BC2184B00666542 /* main.m in Sources */,
 				5A6673A51BC2246800666542 /* UIView+Frame.m in Sources */,
 				5A9E529C1BDB87FF00600929 /* StatusFrame.m in Sources */,
+				5AE56CBE1BDD2D4E00AE3CF9 /* Photo.m in Sources */,
+				5AE56CC41BDD2DED00AE3CF9 /* StatusPhotoView.m in Sources */,
 				5A9E529F1BDB886100600929 /* User.m in Sources */,
 				5A6673911BC2166C00666542 /* ProfileViewController.m in Sources */,
 				5A2491281BC2D1A500F726AB /* SearchBar.m in Sources */,
 				5A8356661BD15C620009E47D /* HttpTool.m in Sources */,
 				5A9E52AB1BDB912000600929 /* StatusCell.m in Sources */,
 				5A83568E1BD166A70009E47D /* OAuthViewController.m in Sources */,
+				5AE56CBB1BDD1D0300AE3CF9 /* NSDate+Time.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

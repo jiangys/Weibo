@@ -10,6 +10,7 @@
 #import "Status.h"
 #import "User.h"
 #import "NSString+Size.h"
+#import "StatusPhotosView.h"
 
 
 @implementation StatusFrame
@@ -70,8 +71,21 @@
     CGSize contentSize = [status.text sizeWithFont:StatusCellContentFont maxW:maxW];
     _contentLabelF = (CGRect){{contentX, contentY}, contentSize};
     
+    /** 配图 */
+    CGFloat originalH = 0;
+    if (status.pic_urls.count) { // 有配图
+        CGFloat photosX = contentX;
+        CGFloat photosY = CGRectGetMaxY(self.contentLabelF) + StatusCellBorderW;
+        CGSize photosSize = [StatusPhotosView sizeWithCount:status.pic_urls.count];
+        _photosViewF = (CGRect){{photosX, photosY}, photosSize};
+        
+        originalH = CGRectGetMaxY(self.photosViewF) + StatusCellBorderW;
+    } else { // 没配图
+        originalH = CGRectGetMaxY(self.contentLabelF) + StatusCellBorderW;
+    }
+    
     /* cell的高度 */
-    _cellHeight = CGRectGetMaxY(self.contentLabelF)+StatusCellBorderW;
+    _cellHeight = originalH;
 }
 
 @end
