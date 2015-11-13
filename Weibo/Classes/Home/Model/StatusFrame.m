@@ -84,8 +84,51 @@
         originalH = CGRectGetMaxY(self.contentLabelF) + StatusCellBorderW;
     }
     
+    /** 原创微博整体 */
+    CGFloat originalX = 0;
+    CGFloat originalY = StatusCellMargin;
+    CGFloat originalW = cellW;
+    _originalViewF = CGRectMake(originalX, originalY, originalW, originalH);
+    
+    CGFloat toolbarY = 0;
+    /* 被转发微博 */
+    if (status.retweeted_status) {
+        Status *retweeted_status = status.retweeted_status;
+        User *retweeted_status_user = retweeted_status.user;
+        
+        /** 被转发微博正文 */
+        CGFloat retweetContentX = StatusCellBorderW;
+        CGFloat retweetContentY = StatusCellBorderW;
+        NSString *retweetContent = [NSString stringWithFormat:@"@%@ : %@", retweeted_status_user.name, retweeted_status.text];
+        CGSize retweetContentSize = [retweetContent sizeWithFont:StatusCellRetweetContentFont maxW:maxW];
+        self.retweetContentLabelF = (CGRect){{retweetContentX, retweetContentY}, retweetContentSize};
+        
+        /** 被转发微博配图 */
+        CGFloat retweetH = 0;
+        if (retweeted_status.pic_urls.count) { // 转发微博有配图
+            CGFloat retweetPhotosX = retweetContentX;
+            CGFloat retweetPhotosY = CGRectGetMaxY(self.retweetContentLabelF) + StatusCellBorderW;
+            CGSize retweetPhotosSize = [StatusPhotosView sizeWithCount:retweeted_status.pic_urls.count];
+            self.retweetPhotosViewF = (CGRect){{retweetPhotosX, retweetPhotosY}, retweetPhotosSize};
+            
+            retweetH = CGRectGetMaxY(self.retweetPhotosViewF) + StatusCellBorderW;
+        } else { // 转发微博没有配图
+            retweetH = CGRectGetMaxY(self.retweetContentLabelF) + StatusCellBorderW;
+        }
+        
+        /** 被转发微博整体 */
+        CGFloat retweetX = 0;
+        CGFloat retweetY = CGRectGetMaxY(self.originalViewF);
+        CGFloat retweetW = cellW;
+        self.retweetViewF = CGRectMake(retweetX, retweetY, retweetW, retweetH);
+        
+        toolbarY = CGRectGetMaxY(self.retweetViewF);
+    } else {
+        toolbarY = CGRectGetMaxY(self.originalViewF);
+    }
+    
     /* cell的高度 */
-    _cellHeight = originalH;
+    _cellHeight = toolbarY;
 }
 
 @end

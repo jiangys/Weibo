@@ -33,6 +33,17 @@
 /** 正文 */
 @property (nonatomic, weak) UILabel *contentLabel;
 
+/* 转发微博 */
+/** 转发微博整体 */
+@property (nonatomic, weak) UIView *retweetView;
+/** 转发微博正文 + 昵称 */
+@property (nonatomic, weak) UILabel *retweetContentLabel;
+/** 转发配图 */
+@property (nonatomic, weak) StatusPhotosView *retweetPhotosView;
+
+/** 工具条 */
+//@property (nonatomic, weak) HWStatusToolbar *toolbar;
+
 @end
 
 @implementation StatusCell
@@ -46,55 +57,92 @@
 {
     if (self==[super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
-        /** 原创微博整体 */
-        UIView *originalView = [[UIView alloc] init];
-        originalView.backgroundColor = [UIColor whiteColor];
-        [self.contentView addSubview:originalView];
-        self.originalView = originalView;
+        // 初始化原创微博
+        [self setupOriginal];
         
-        /** 头像 */
-        UIImageView *iconView = [[UIImageView alloc] init];
-        [originalView addSubview:iconView];
-        self.iconView = iconView;
-        
-        /** 会员图标 */
-        UIImageView *vipView = [[UIImageView alloc] init];
-        vipView.contentMode = UIViewContentModeCenter;
-        [originalView addSubview:vipView];
-        self.vipView = vipView;
-        
-        /** 配图 */
-        StatusPhotosView *photosView = [[StatusPhotosView alloc] init];
-        [originalView addSubview:photosView];
-        self.photosView = photosView;
-        
-        /** 昵称 */
-        UILabel *nameLabel = [[UILabel alloc] init];
-        nameLabel.font = StatusCellNameFont;
-        [originalView addSubview:nameLabel];
-        self.nameLabel = nameLabel;
-        
-        /** 时间 */
-        UILabel *timeLabel = [[UILabel alloc] init];
-        timeLabel.font = StatusCellTimeFont;
-        timeLabel.textColor = [UIColor orangeColor];
-        [originalView addSubview:timeLabel];
-        self.timeLabel = timeLabel;
-        
-        /** 来源 */
-        UILabel *sourceLabel = [[UILabel alloc] init];
-        sourceLabel.font = StatusCellSourceFont;
-        [originalView addSubview:sourceLabel];
-        self.sourceLabel = sourceLabel;
-        
-        /** 正文 */
-        UILabel *contentLabel = [[UILabel alloc] init];
-        contentLabel.font = StatusCellContentFont;
-        contentLabel.numberOfLines = 0;
-        [originalView addSubview:contentLabel];
-        self.contentLabel = contentLabel;
+        // 初始化转发微博
+        [self setupRetweet];
+
     }
     return self;
+}
+
+/**
+ *  原创微博
+ */
+- (void)setupOriginal
+{
+    /** 原创微博整体 */
+    UIView *originalView = [[UIView alloc] init];
+    originalView.backgroundColor = [UIColor whiteColor];
+    [self.contentView addSubview:originalView];
+    self.originalView = originalView;
+    
+    /** 头像 */
+    UIImageView *iconView = [[UIImageView alloc] init];
+    [originalView addSubview:iconView];
+    self.iconView = iconView;
+    
+    /** 会员图标 */
+    UIImageView *vipView = [[UIImageView alloc] init];
+    vipView.contentMode = UIViewContentModeCenter;
+    [originalView addSubview:vipView];
+    self.vipView = vipView;
+    
+    /** 配图 */
+    StatusPhotosView *photosView = [[StatusPhotosView alloc] init];
+    [originalView addSubview:photosView];
+    self.photosView = photosView;
+    
+    /** 昵称 */
+    UILabel *nameLabel = [[UILabel alloc] init];
+    nameLabel.font = StatusCellNameFont;
+    [originalView addSubview:nameLabel];
+    self.nameLabel = nameLabel;
+    
+    /** 时间 */
+    UILabel *timeLabel = [[UILabel alloc] init];
+    timeLabel.font = StatusCellTimeFont;
+    timeLabel.textColor = [UIColor orangeColor];
+    [originalView addSubview:timeLabel];
+    self.timeLabel = timeLabel;
+    
+    /** 来源 */
+    UILabel *sourceLabel = [[UILabel alloc] init];
+    sourceLabel.font = StatusCellSourceFont;
+    [originalView addSubview:sourceLabel];
+    self.sourceLabel = sourceLabel;
+    
+    /** 正文 */
+    UILabel *contentLabel = [[UILabel alloc] init];
+    contentLabel.font = StatusCellContentFont;
+    contentLabel.numberOfLines = 0;
+    [originalView addSubview:contentLabel];
+    self.contentLabel = contentLabel;
+}
+/**
+ *  初始化转发微博
+ */
+- (void)setupRetweet{
+    
+    /** 转发微博主体*/
+    UIView *retweetView = [[UIView alloc] init];
+    retweetView.backgroundColor = YSColor(247, 247, 247);
+    [self.contentView addSubview:retweetView];
+    self.retweetView = retweetView;
+    
+    /** 转发微博正文 + 昵称 */
+    UILabel *retweetContentLabel = [[UILabel alloc] init];
+    retweetContentLabel.numberOfLines = 0;
+    retweetContentLabel.font = StatusCellRetweetContentFont;
+    [retweetView addSubview:retweetContentLabel];
+    self.retweetContentLabel = retweetContentLabel;
+    
+    /** 转发配图 */
+    StatusPhotosView *retweetPhotosView = [[StatusPhotosView alloc] init];
+    [retweetView addSubview:retweetPhotosView];
+    self.retweetPhotosView = retweetPhotosView;
+    
 }
 
 - (void)setStatusFrame:(StatusFrame *)statusFrame
@@ -156,14 +204,33 @@
     self.contentLabel.text = status.text;
     self.contentLabel.frame = statusFrame.contentLabelF;
     
-    /** 配图 */
-    if (status.pic_urls.count) {
-        self.photosView.photos = status.pic_urls;
-        self.photosView.frame = statusFrame.photosViewF;
-        self.photosView.hidden = NO;
-    } else {
-        self.photosView.hidden = YES;
+    // 被转发微博
+    if(status.retweeted_status){
+        Status *retweeted_status = status.retweeted_status;
+        User *retweeted_status_user = retweeted_status.user;
+        
+        self.retweetView.hidden = NO;
+        self.retweetView.hidden = NO;
+        /** 被转发的微博整体 */
+        self.retweetView.frame = statusFrame.retweetViewF;
+        
+        /** 被转发的微博正文 */
+        NSString *retweetContent = [NSString stringWithFormat:@"@%@ : %@", retweeted_status_user.name, retweeted_status.text];
+        self.retweetContentLabel.text = retweetContent;
+        self.retweetContentLabel.frame = statusFrame.retweetContentLabelF;
+        
+        /** 被转发的微博配图 */
+        if (retweeted_status.pic_urls.count) {
+            self.retweetPhotosView.frame = statusFrame.retweetPhotosViewF;
+            self.retweetPhotosView.photos = retweeted_status.pic_urls;
+            self.retweetPhotosView.hidden = NO;
+        } else {
+            self.retweetPhotosView.hidden = YES;
+        }
+    } else{
+        self.retweetView.hidden = YES;
     }
+    
 }
 
 + (instancetype)cellWithTableView:(UITableView *)tableView
