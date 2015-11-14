@@ -10,7 +10,7 @@
 
 @implementation NSString (Size)
 
-- (CGSize)sizeWithFont:(UIFont *)font maxW:(CGFloat)maxW
+- (CGSize)textSizeWithFont:(UIFont *)font maxW:(CGFloat)maxW
 {
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = font;
@@ -19,9 +19,9 @@
     return [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
 }
 
-- (CGSize)sizeWithFont:(UIFont *)font
+- (CGSize)textSizeWithFont:(UIFont *)font
 {
-    return [self sizeWithFont:font maxW:MAXFLOAT];
+    return [self textSizeWithFont:font maxW:MAXFLOAT];
 }
 
 @end

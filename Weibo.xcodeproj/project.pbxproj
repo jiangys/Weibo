@@ -8,48 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		08FB8235F59357231F0EA9F1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90DF48097AB2A3B47ECF9178 /* libPods.a */; };
-		5A2491281BC2D1A500F726AB /* SearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2491271BC2D1A500F726AB /* SearchBar.m */; settings = {ASSET_TAGS = (); }; };
-		5A24912E1BC2D73D00F726AB /* UIImage+Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A24912D1BC2D73D00F726AB /* UIImage+Effect.m */; settings = {ASSET_TAGS = (); }; };
-		5A2491341BC2DB9F00F726AB /* DropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2491331BC2DB9F00F726AB /* DropdownMenu.m */; settings = {ASSET_TAGS = (); }; };
-		5A24913A1BC2DF8400F726AB /* TitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2491391BC2DF8400F726AB /* TitleMenuViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5A6082591BC6BEF000B10279 /* TitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6082581BC6BEF000B10279 /* TitleButton.m */; settings = {ASSET_TAGS = (); }; };
-		5A66738D1BC2166C00666542 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66736C1BC2166C00666542 /* DiscoverViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5A66738E1BC2166C00666542 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673721BC2166C00666542 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5A66738F1BC2166C00666542 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673781BC2166C00666542 /* TabBarViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5A6673901BC2166C00666542 /* MessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66737F1BC2166C00666542 /* MessageCenterViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5A6673911BC2166C00666542 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66738A1BC2166C00666542 /* ProfileViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5A66739A1BC2184B00666542 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673981BC2184B00666542 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		5A66739B1BC2184B00666542 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673991BC2184B00666542 /* main.m */; settings = {ASSET_TAGS = (); }; };
-		5A66739E1BC21BE600666542 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66739D1BC21BE600666542 /* NavigationViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5A6673A21BC222B400666542 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673A11BC222B400666542 /* UIBarButtonItem+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		5A6673A51BC2246800666542 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673A41BC2246800666542 /* UIView+Frame.m */; settings = {ASSET_TAGS = (); }; };
-		5A6673AA1BC2289900666542 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673A91BC2289900666542 /* Test1ViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5A6673AD1BC2391000666542 /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673AC1BC2391000666542 /* TabBar.m */; settings = {ASSET_TAGS = (); }; };
-		5A6673B31BC2615600666542 /* PlusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673B21BC2615600666542 /* PlusViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5A8356661BD15C620009E47D /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8356651BD15C620009E47D /* HttpTool.m */; settings = {ASSET_TAGS = (); }; };
-		5A83567F1BD15F240009E47D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A83567D1BD15F240009E47D /* MBProgressHUD.bundle */; settings = {ASSET_TAGS = (); }; };
-		5A8356821BD15F9B0009E47D /* MBProgressHUD+YS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8356811BD15F9B0009E47D /* MBProgressHUD+YS.m */; settings = {ASSET_TAGS = (); }; };
-		5A8356881BD161F60009E47D /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8356871BD161F60009E47D /* Account.m */; settings = {ASSET_TAGS = (); }; };
-		5A83568B1BD165C40009E47D /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A83568A1BD165C40009E47D /* AccountTool.m */; settings = {ASSET_TAGS = (); }; };
-		5A83568E1BD166A70009E47D /* OAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A83568D1BD166A70009E47D /* OAuthViewController.m */; settings = {ASSET_TAGS = (); }; };
+		181E72F31BF6F3C700713D4B /* StatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 181E72F21BF6F3C700713D4B /* StatusToolbar.m */; };
+		5A2491281BC2D1A500F726AB /* SearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2491271BC2D1A500F726AB /* SearchBar.m */; };
+		5A24912E1BC2D73D00F726AB /* UIImage+Effect.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A24912D1BC2D73D00F726AB /* UIImage+Effect.m */; };
+		5A2491341BC2DB9F00F726AB /* DropdownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2491331BC2DB9F00F726AB /* DropdownMenu.m */; };
+		5A24913A1BC2DF8400F726AB /* TitleMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2491391BC2DF8400F726AB /* TitleMenuViewController.m */; };
+		5A6082591BC6BEF000B10279 /* TitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6082581BC6BEF000B10279 /* TitleButton.m */; };
+		5A66738D1BC2166C00666542 /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66736C1BC2166C00666542 /* DiscoverViewController.m */; };
+		5A66738E1BC2166C00666542 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673721BC2166C00666542 /* HomeViewController.m */; };
+		5A66738F1BC2166C00666542 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673781BC2166C00666542 /* TabBarViewController.m */; };
+		5A6673901BC2166C00666542 /* MessageCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66737F1BC2166C00666542 /* MessageCenterViewController.m */; };
+		5A6673911BC2166C00666542 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66738A1BC2166C00666542 /* ProfileViewController.m */; };
+		5A66739A1BC2184B00666542 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673981BC2184B00666542 /* AppDelegate.m */; };
+		5A66739B1BC2184B00666542 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673991BC2184B00666542 /* main.m */; };
+		5A66739E1BC21BE600666542 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66739D1BC21BE600666542 /* NavigationViewController.m */; };
+		5A6673A21BC222B400666542 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673A11BC222B400666542 /* UIBarButtonItem+Extension.m */; };
+		5A6673A51BC2246800666542 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673A41BC2246800666542 /* UIView+Frame.m */; };
+		5A6673AA1BC2289900666542 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673A91BC2289900666542 /* Test1ViewController.m */; };
+		5A6673AD1BC2391000666542 /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673AC1BC2391000666542 /* TabBar.m */; };
+		5A6673B31BC2615600666542 /* PlusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673B21BC2615600666542 /* PlusViewController.m */; };
+		5A8356661BD15C620009E47D /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8356651BD15C620009E47D /* HttpTool.m */; };
+		5A83567F1BD15F240009E47D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A83567D1BD15F240009E47D /* MBProgressHUD.bundle */; };
+		5A8356821BD15F9B0009E47D /* MBProgressHUD+YS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8356811BD15F9B0009E47D /* MBProgressHUD+YS.m */; };
+		5A8356881BD161F60009E47D /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8356871BD161F60009E47D /* Account.m */; };
+		5A83568B1BD165C40009E47D /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A83568A1BD165C40009E47D /* AccountTool.m */; };
+		5A83568E1BD166A70009E47D /* OAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A83568D1BD166A70009E47D /* OAuthViewController.m */; };
 		5A83B6B91BC18B75007B414A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A83B6B71BC18B75007B414A /* Main.storyboard */; };
 		5A83B6BB1BC18B75007B414A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A83B6BA1BC18B75007B414A /* Assets.xcassets */; };
 		5A83B6BE1BC18B75007B414A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A83B6BC1BC18B75007B414A /* LaunchScreen.storyboard */; };
 		5A83B6C91BC18B75007B414A /* WeiboTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A83B6C81BC18B75007B414A /* WeiboTests.m */; };
 		5A83B6D41BC18B75007B414A /* WeiboUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A83B6D31BC18B75007B414A /* WeiboUITests.m */; };
-		5A9E52991BDB87E900600929 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E52981BDB87E900600929 /* Status.m */; settings = {ASSET_TAGS = (); }; };
-		5A9E529C1BDB87FF00600929 /* StatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E529B1BDB87FF00600929 /* StatusFrame.m */; settings = {ASSET_TAGS = (); }; };
-		5A9E529F1BDB886100600929 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E529E1BDB886100600929 /* User.m */; settings = {ASSET_TAGS = (); }; };
-		5A9E52AB1BDB912000600929 /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E52AA1BDB912000600929 /* StatusCell.m */; settings = {ASSET_TAGS = (); }; };
-		5A9E52AE1BDBD3B200600929 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E52AD1BDBD3B200600929 /* NSString+Size.m */; settings = {ASSET_TAGS = (); }; };
-		5A9E52B11BDBDAB200600929 /* NSString+Regex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E52B01BDBDAB200600929 /* NSString+Regex.m */; settings = {ASSET_TAGS = (); }; };
-		5ABDEBC91BD33E75001CA5F1 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDEBC81BD33E75001CA5F1 /* Const.m */; settings = {ASSET_TAGS = (); }; };
-		5AC99EE41BCA6A83000B04A9 /* NewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC99EE31BCA6A83000B04A9 /* NewfeatureViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5AC99EE71BCAB8D0000B04A9 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC99EE61BCAB8D0000B04A9 /* UIWindow+Extension.m */; settings = {ASSET_TAGS = (); }; };
-		5AE56CBB1BDD1D0300AE3CF9 /* NSDate+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CBA1BDD1D0300AE3CF9 /* NSDate+Time.m */; settings = {ASSET_TAGS = (); }; };
-		5AE56CBE1BDD2D4E00AE3CF9 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CBD1BDD2D4E00AE3CF9 /* Photo.m */; settings = {ASSET_TAGS = (); }; };
-		5AE56CC41BDD2DED00AE3CF9 /* StatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CC31BDD2DED00AE3CF9 /* StatusPhotoView.m */; settings = {ASSET_TAGS = (); }; };
-		5AE56CC71BDD302600AE3CF9 /* StatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CC61BDD302600AE3CF9 /* StatusPhotosView.m */; settings = {ASSET_TAGS = (); }; };
+		5A9E52991BDB87E900600929 /* Status.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E52981BDB87E900600929 /* Status.m */; };
+		5A9E529C1BDB87FF00600929 /* StatusFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E529B1BDB87FF00600929 /* StatusFrame.m */; };
+		5A9E529F1BDB886100600929 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E529E1BDB886100600929 /* User.m */; };
+		5A9E52AB1BDB912000600929 /* StatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E52AA1BDB912000600929 /* StatusCell.m */; };
+		5A9E52AE1BDBD3B200600929 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E52AD1BDBD3B200600929 /* NSString+Size.m */; };
+		5A9E52B11BDBDAB200600929 /* NSString+Regex.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E52B01BDBDAB200600929 /* NSString+Regex.m */; };
+		5ABDEBC91BD33E75001CA5F1 /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABDEBC81BD33E75001CA5F1 /* Const.m */; };
+		5AC99EE41BCA6A83000B04A9 /* NewfeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC99EE31BCA6A83000B04A9 /* NewfeatureViewController.m */; };
+		5AC99EE71BCAB8D0000B04A9 /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC99EE61BCAB8D0000B04A9 /* UIWindow+Extension.m */; };
+		5AE56CBB1BDD1D0300AE3CF9 /* NSDate+Time.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CBA1BDD1D0300AE3CF9 /* NSDate+Time.m */; };
+		5AE56CBE1BDD2D4E00AE3CF9 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CBD1BDD2D4E00AE3CF9 /* Photo.m */; };
+		5AE56CC41BDD2DED00AE3CF9 /* StatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CC31BDD2DED00AE3CF9 /* StatusPhotoView.m */; };
+		5AE56CC71BDD302600AE3CF9 /* StatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE56CC61BDD302600AE3CF9 /* StatusPhotosView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		181E72F11BF6F3C700713D4B /* StatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusToolbar.h; sourceTree = "<group>"; };
+		181E72F21BF6F3C700713D4B /* StatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusToolbar.m; sourceTree = "<group>"; };
 		1E1D2284CCB4FBC127F747E6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5A2491261BC2D1A500F726AB /* SearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchBar.h; sourceTree = "<group>"; };
 		5A2491271BC2D1A500F726AB /* SearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchBar.m; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 				5AE56CC31BDD2DED00AE3CF9 /* StatusPhotoView.m */,
 				5AE56CC51BDD302600AE3CF9 /* StatusPhotosView.h */,
 				5AE56CC61BDD302600AE3CF9 /* StatusPhotosView.m */,
+				181E72F11BF6F3C700713D4B /* StatusToolbar.h */,
+				181E72F21BF6F3C700713D4B /* StatusToolbar.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -751,6 +756,7 @@
 				5A6082591BC6BEF000B10279 /* TitleButton.m in Sources */,
 				5A8356821BD15F9B0009E47D /* MBProgressHUD+YS.m in Sources */,
 				5AC99EE71BCAB8D0000B04A9 /* UIWindow+Extension.m in Sources */,
+				181E72F31BF6F3C700713D4B /* StatusToolbar.m in Sources */,
 				5A66738D1BC2166C00666542 /* DiscoverViewController.m in Sources */,
 				5A6673901BC2166C00666542 /* MessageCenterViewController.m in Sources */,
 				5A66739A1BC2184B00666542 /* AppDelegate.m in Sources */,

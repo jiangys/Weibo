@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSString (Size)
-- (CGSize)sizeWithFont:(UIFont *)font maxW:(CGFloat)maxW;
-- (CGSize)sizeWithFont:(UIFont *)font;
+- (CGSize)textSizeWithFont:(UIFont *)font maxW:(CGFloat)maxW;
+- (CGSize)textSizeWithFont:(UIFont *)font;
 @end

@@ -9,15 +9,65 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>MJExtension.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>5352D432641F0656C90741034E32F31E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5795BAEF68C276BFA451AC9E87F4EB45</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C9B7EC4A4D6CFBF6E155CA50580DDDF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DC92F4E6FE3E805B3C37E66574BBDFF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>893A27068B340BE00C8C86FFDBDDEEA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BCD6E02CE0A7B6F6D3E36129546E824F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C8E80BB37C01A18F7044D7FCD46F3360</key>
 		<dict>
 			<key>primary</key>
 			<true/>

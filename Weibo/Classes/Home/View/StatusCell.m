@@ -12,6 +12,7 @@
 #import "User.h"
 #import "UIImageView+WebCache.h"
 #import "StatusPhotosView.h"
+#import "StatusToolbar.h"
 
 @interface StatusCell()
 
@@ -42,7 +43,7 @@
 @property (nonatomic, weak) StatusPhotosView *retweetPhotosView;
 
 /** 工具条 */
-//@property (nonatomic, weak) HWStatusToolbar *toolbar;
+@property (nonatomic, weak) StatusToolbar *toolbar;
 
 @end
 
@@ -57,12 +58,19 @@
 {
     if (self==[super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
+        self.backgroundColor = [UIColor clearColor];
+        // 点击cell的时候不要变色
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         // 初始化原创微博
         [self setupOriginal];
         
         // 初始化转发微博
         [self setupRetweet];
-
+        
+        // 初始化工具条
+        [self setupToolbar];
+        
     }
     return self;
 }
@@ -123,7 +131,8 @@
 /**
  *  初始化转发微博
  */
-- (void)setupRetweet{
+- (void)setupRetweet
+{
     
     /** 转发微博主体*/
     UIView *retweetView = [[UIView alloc] init];
@@ -142,7 +151,16 @@
     StatusPhotosView *retweetPhotosView = [[StatusPhotosView alloc] init];
     [retweetView addSubview:retweetPhotosView];
     self.retweetPhotosView = retweetPhotosView;
-    
+}
+
+/**
+ *  初始化工具条
+ */
+- (void)setupToolbar
+{
+    StatusToolbar *toolbar = [StatusToolbar toolbar];
+    [self.contentView addSubview:toolbar];
+    self.toolbar = toolbar;
 }
 
 - (void)setStatusFrame:(StatusFrame *)statusFrame
@@ -171,7 +189,7 @@
         self.nameLabel.textColor = [UIColor blackColor];
         self.vipView.hidden = YES;
     }
-
+    
     /** 配图 */
     if (status.pic_urls.count) {
         self.photosView.frame = statusFrame.photosViewF;
@@ -192,7 +210,7 @@
     CGSize timeSize = [time sizeWithFont:StatusCellTimeFont];
     self.timeLabel.frame = (CGRect){{timeX, timeY}, timeSize};
     self.timeLabel.text = time;
-
+    
     /** 来源 */
     CGFloat sourceX = CGRectGetMaxX(self.timeLabel.frame) + StatusCellBorderW;
     CGFloat sourceY = timeY;
@@ -231,6 +249,9 @@
         self.retweetView.hidden = YES;
     }
     
+    /** 工具条 */
+    self.toolbar.frame = statusFrame.toolbarViewF;
+    self.toolbar.status = statusFrame.status;
 }
 
 + (instancetype)cellWithTableView:(UITableView *)tableView

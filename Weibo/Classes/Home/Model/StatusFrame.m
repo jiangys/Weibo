@@ -40,7 +40,7 @@
     /** 昵称 */
     CGFloat nameX = CGRectGetMaxX(self.iconViewF) + StatusCellBorderW;
     CGFloat nameY = iconY;
-    CGSize nameSize = [user.name sizeWithFont:StatusCellNameFont];
+    CGSize nameSize = [user.name textSizeWithFont:StatusCellNameFont];
     _nameLabelF = (CGRect){{nameX, nameY}, nameSize};
     
     /** 会员图标 */
@@ -55,20 +55,20 @@
     /** 时间 */
     CGFloat timeX = nameX;
     CGFloat timeY = CGRectGetMaxY(self.nameLabelF) + StatusCellBorderW;
-    CGSize timeSize = [status.created_at sizeWithFont:StatusCellTimeFont];
+    CGSize timeSize = [status.created_at textSizeWithFont:StatusCellTimeFont];
     _timeLabelF = (CGRect){{timeX, timeY}, timeSize};
     
     /** 来源 */
     CGFloat sourceX = CGRectGetMaxX(self.timeLabelF) + StatusCellBorderW;
     CGFloat sourceY = timeY;
-    CGSize sourceSize = [status.source sizeWithFont:StatusCellSourceFont];
+    CGSize sourceSize = [status.source textSizeWithFont:StatusCellSourceFont];
     _sourceLabelF = (CGRect){{sourceX, sourceY}, sourceSize};
     
     /** 正文 */
     CGFloat contentX = iconX;
     CGFloat contentY = MAX(CGRectGetMaxY(self.iconViewF), CGRectGetMaxY(self.timeLabelF)) + StatusCellBorderW;
     CGFloat maxW = cellW - 2 * contentX;
-    CGSize contentSize = [status.text sizeWithFont:StatusCellContentFont maxW:maxW];
+    CGSize contentSize = [status.text textSizeWithFont:StatusCellContentFont maxW:maxW];
     _contentLabelF = (CGRect){{contentX, contentY}, contentSize};
     
     /** 配图 */
@@ -100,7 +100,7 @@
         CGFloat retweetContentX = StatusCellBorderW;
         CGFloat retweetContentY = StatusCellBorderW;
         NSString *retweetContent = [NSString stringWithFormat:@"@%@ : %@", retweeted_status_user.name, retweeted_status.text];
-        CGSize retweetContentSize = [retweetContent sizeWithFont:StatusCellRetweetContentFont maxW:maxW];
+        CGSize retweetContentSize = [retweetContent textSizeWithFont:StatusCellRetweetContentFont maxW:maxW];
         self.retweetContentLabelF = (CGRect){{retweetContentX, retweetContentY}, retweetContentSize};
         
         /** 被转发微博配图 */
@@ -127,8 +127,13 @@
         toolbarY = CGRectGetMaxY(self.originalViewF);
     }
     
+    CGFloat toolbarX = 0;
+    CGFloat toolbarW = cellW;
+    CGFloat toolbarH = 35;
+    _toolbarViewF = CGRectMake(toolbarX, toolbarY, toolbarW, toolbarH);
+    
     /* cell的高度 */
-    _cellHeight = toolbarY;
+    _cellHeight = CGRectGetMaxY(_toolbarViewF);
 }
 
 @end

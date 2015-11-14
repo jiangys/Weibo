@@ -40,7 +40,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //self.tableView.backgroundColor = YSColor(211, 211, 211);
+
     // 设置导航栏内容
     [self setupNav];
     
