@@ -31,6 +31,10 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        // 开启交互
+        self.userInteractionEnabled = YES;
+        
         // 内容模式
         self.contentMode = UIViewContentModeScaleAspectFill;
         // 超出边框的内容都剪掉

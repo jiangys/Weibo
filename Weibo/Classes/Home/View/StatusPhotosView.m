@@ -9,6 +9,7 @@
 #import "StatusPhotosView.h"
 #import "StatusPhotoView.h"
 #import "Photo.h"
+#import "SDPhotoBrowser.h"
 
 #define StatusPhotoWH 70
 #define StatusPhotoMargin 10
@@ -38,9 +39,42 @@
         } else{
             photoView.hidden=YES;
         }
+        
+        photoView.tag = i;
+        // 添加手势监听器（一个手势监听器 只能 监听对应的一个view）
+        UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] init];
+        [recognizer addTarget:self action:@selector(tapPhoto:)];
+        [photoView addGestureRecognizer:recognizer];
     }
     
 }
+
+- (void)tapPhoto:(UITapGestureRecognizer *)recognizer
+{
+    SDPhotoBrowser *browser = [[SDPhotoBrowser alloc] init];
+    browser.sourceImagesContainerView = self; // 原图的父控件
+    browser.imageCount = self.photos.count; // 图片总数
+    browser.currentImageIndex = recognizer.view.tag;
+    browser.delegate =self; //self.subviews[recognizer.view.tag];
+    [browser show];
+}
+
+#pragma mark - photobrowser代理方法
+
+// 返回临时占位图片（即原来的小图）
+- (UIImage *)photoBrowser:(SDPhotoBrowser *)browser placeholderImageForIndex:(NSInteger)index
+{
+    return  [(StatusPhotoView *)self.subviews[index] image];
+}
+
+
+// 返回高质量图片的url
+- (NSURL *)photoBrowser:(SDPhotoBrowser *)browser highQualityImageURLForIndex:(NSInteger)index
+{
+    NSString *urlStr = [[self.photos[index] thumbnail_pic] stringByReplacingOccurrencesOfString:@"thumbnail" withString:@"bmiddle"];
+    return [NSURL URLWithString:urlStr];
+}
+
 
 - (void)layoutSubviews
 {

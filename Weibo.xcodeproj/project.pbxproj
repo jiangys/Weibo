@@ -27,6 +27,9 @@
 		5A6673AA1BC2289900666542 /* Test1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673A91BC2289900666542 /* Test1ViewController.m */; };
 		5A6673AD1BC2391000666542 /* TabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673AC1BC2391000666542 /* TabBar.m */; };
 		5A6673B31BC2615600666542 /* PlusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6673B21BC2615600666542 /* PlusViewController.m */; };
+		5A81514C1BF855C600E2E26D /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8151461BF855C600E2E26D /* SDBrowserImageView.m */; settings = {ASSET_TAGS = (); }; };
+		5A81514D1BF855C600E2E26D /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8151481BF855C600E2E26D /* SDPhotoBrowser.m */; settings = {ASSET_TAGS = (); }; };
+		5A81514E1BF855C600E2E26D /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A81514B1BF855C600E2E26D /* SDWaitingView.m */; settings = {ASSET_TAGS = (); }; };
 		5A8356661BD15C620009E47D /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8356651BD15C620009E47D /* HttpTool.m */; };
 		5A83567F1BD15F240009E47D /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A83567D1BD15F240009E47D /* MBProgressHUD.bundle */; };
 		5A8356821BD15F9B0009E47D /* MBProgressHUD+YS.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8356811BD15F9B0009E47D /* MBProgressHUD+YS.m */; };
@@ -109,6 +112,13 @@
 		5A6673AC1BC2391000666542 /* TabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBar.m; sourceTree = "<group>"; };
 		5A6673B11BC2615600666542 /* PlusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlusViewController.h; sourceTree = "<group>"; };
 		5A6673B21BC2615600666542 /* PlusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlusViewController.m; sourceTree = "<group>"; };
+		5A8151451BF855C600E2E26D /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
+		5A8151461BF855C600E2E26D /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
+		5A8151471BF855C600E2E26D /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
+		5A8151481BF855C600E2E26D /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
+		5A8151491BF855C600E2E26D /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
+		5A81514A1BF855C600E2E26D /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
+		5A81514B1BF855C600E2E26D /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
 		5A8356641BD15C620009E47D /* HttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTool.h; sourceTree = "<group>"; };
 		5A8356651BD15C620009E47D /* HttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpTool.m; sourceTree = "<group>"; };
 		5A83567D1BD15F240009E47D /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -458,6 +468,20 @@
 			path = Temp;
 			sourceTree = "<group>";
 		};
+		5A8151441BF855C600E2E26D /* SDPhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				5A8151451BF855C600E2E26D /* SDBrowserImageView.h */,
+				5A8151461BF855C600E2E26D /* SDBrowserImageView.m */,
+				5A8151471BF855C600E2E26D /* SDPhotoBrowser.h */,
+				5A8151481BF855C600E2E26D /* SDPhotoBrowser.m */,
+				5A8151491BF855C600E2E26D /* SDPhotoBrowserConfig.h */,
+				5A81514A1BF855C600E2E26D /* SDWaitingView.h */,
+				5A81514B1BF855C600E2E26D /* SDWaitingView.m */,
+			);
+			path = SDPhotoBrowser;
+			sourceTree = "<group>";
+		};
 		5A8356631BD15BD60009E47D /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +494,7 @@
 		5A8356741BD15EEA0009E47D /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				5A8151441BF855C600E2E26D /* SDPhotoBrowser */,
 				5A83567A1BD15F240009E47D /* MBProgressHUD */,
 			);
 			path = Library;
@@ -768,12 +793,14 @@
 				5A6673AA1BC2289900666542 /* Test1ViewController.m in Sources */,
 				5A6673B31BC2615600666542 /* PlusViewController.m in Sources */,
 				5AC99EE41BCA6A83000B04A9 /* NewfeatureViewController.m in Sources */,
+				5A81514E1BF855C600E2E26D /* SDWaitingView.m in Sources */,
 				5ABDEBC91BD33E75001CA5F1 /* Const.m in Sources */,
 				5A83568B1BD165C40009E47D /* AccountTool.m in Sources */,
 				5A66738F1BC2166C00666542 /* TabBarViewController.m in Sources */,
 				5AE56CC71BDD302600AE3CF9 /* StatusPhotosView.m in Sources */,
 				5A66739E1BC21BE600666542 /* NavigationViewController.m in Sources */,
 				5A66738E1BC2166C00666542 /* HomeViewController.m in Sources */,
+				5A81514D1BF855C600E2E26D /* SDPhotoBrowser.m in Sources */,
 				5A6673A21BC222B400666542 /* UIBarButtonItem+Extension.m in Sources */,
 				5A2491341BC2DB9F00F726AB /* DropdownMenu.m in Sources */,
 				5A24913A1BC2DF8400F726AB /* TitleMenuViewController.m in Sources */,
@@ -783,6 +810,7 @@
 				5A9E529C1BDB87FF00600929 /* StatusFrame.m in Sources */,
 				5AE56CBE1BDD2D4E00AE3CF9 /* Photo.m in Sources */,
 				5AE56CC41BDD2DED00AE3CF9 /* StatusPhotoView.m in Sources */,
+				5A81514C1BF855C600E2E26D /* SDBrowserImageView.m in Sources */,
 				5A9E529F1BDB886100600929 /* User.m in Sources */,
 				5A6673911BC2166C00666542 /* ProfileViewController.m in Sources */,
 				5A2491281BC2D1A500F726AB /* SearchBar.m in Sources */,
