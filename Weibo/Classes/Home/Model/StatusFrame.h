@@ -24,7 +24,7 @@
 #define StatusCellRetweetContentFont [UIFont systemFontOfSize:13]
 
 // cell之间的间距
-#define StatusCellMargin 10
+#define StatusCellMargin 15
 
 
 @interface StatusFrame : NSObject
